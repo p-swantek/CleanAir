@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.transitiontose.wildfire.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/firstRelativeLayout"
+        >
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+            android:layout_marginTop="66dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
+            android:id="@+id/firstCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="2dp"
+
+            >
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/secondRelativeLayout"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+            >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="App mode: "
+                    android:id="@+id/statusTextView"
+                    android:paddingTop="15dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="#000000" android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/viewing"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/image" android:layout_below="@+id/statusTextView"/>
+
+                <!--
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username:"
+                    android:id="@+id/usernameTextView"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/textView4"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" android:textColor="#000000"/>
+
+                <EditText
+                    android:id="@+id/usernameField"
+                    android:singleLine="true"
+                    android:text=""
+                    android:layout_width="250dip"
+                    android:gravity="left"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:layout_alignBaseline="@+id/usernameTextView"
+                    android:layout_alignBottom="@+id/usernameTextView"
+                    android:layout_toRightOf="@+id/usernameTextView"
+                    android:layout_toEndOf="@+id/usernameTextView"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password:"
+                    android:id="@+id/passwordTextView"
+                    android:layout_marginTop="22dp"
+                    android:layout_below="@+id/usernameTextView"
+                    android:layout_alignRight="@+id/usernameTextView"
+                    android:layout_alignEnd="@+id/usernameTextView" android:textColor="#000000"/>
+
+                <EditText
+                    android:id="@+id/passwordField"
+                    android:singleLine="true"
+                    android:text=""
+                    android:layout_width="250dip"
+                    android:gravity="left"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:layout_alignBaseline="@+id/passwordTextView"
+                    android:layout_alignBottom="@+id/passwordTextView"
+                    android:layout_toRightOf="@+id/passwordTextView"
+                    android:layout_toEndOf="@+id/passwordTextView"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Log in"
+                    android:id="@+id/textView4"
+                    android:paddingTop="15dp"
+                    android:textStyle="bold"
+                    android:textSize="24dp"
+                    android:textColor="#000000" android:layout_below="@+id/statusTextView" android:layout_alignStart="@+id/userid"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOG IN"
+                    android:id="@+id/loginButton"
+                    android:layout_below="@+id/passwordField" android:layout_alignLeft="@+id/usernameTextView" android:layout_alignStart="@+id/usernameTextView"
+                    android:layout_marginTop="25dp"
+                    android:onClick="loginButtonPressed"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:id="@+id/registerTextView"
+                    android:textStyle="bold"
+                    android:textSize="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username:"
+                    android:id="@+id/usernameRegisterTextView"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" android:layout_below="@+id/registerTextView" android:layout_alignLeft="@+id/passwordTextView"
+                    android:layout_alignStart="@+id/passwordTextView"/>
+
+                <EditText
+                    android:id="@+id/usernameRegisterField"
+                    android:singleLine="true"
+                    android:text=""
+                    android:layout_width="250dip"
+                    android:gravity="left"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:layout_alignBaseline="@+id/usernameRegisterTextView"
+                    android:layout_alignBottom="@+id/usernameRegisterTextView"
+                    android:layout_toRightOf="@+id/usernameRegisterTextView"
+                    android:layout_toEndOf="@+id/usernameRegisterTextView"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password:"
+                    android:id="@+id/passwordRegisterTextView"
+                    android:layout_marginTop="22dp"
+                    android:layout_below="@+id/usernameRegisterTextView"
+                    android:layout_alignRight="@+id/usernameRegisterTextView"
+                    android:layout_alignEnd="@+id/usernameRegisterTextView"
+                    android:textColor="#000000"/>
+
+                <EditText
+                    android:id="@+id/passwordRegisterField"
+                    android:singleLine="true"
+                    android:text=""
+                    android:layout_width="250dip"
+                    android:gravity="left"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:layout_alignBaseline="@+id/passwordRegisterTextView"
+                    android:layout_alignBottom="@+id/passwordRegisterTextView"
+                    android:layout_toRightOf="@+id/passwordRegisterTextView"
+                    android:layout_toEndOf="@+id/passwordRegisterTextView"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:id="@+id/emailRegisterTextView"
+                    android:layout_marginTop="22dp"
+                    android:layout_below="@+id/passwordRegisterTextView"
+                    android:layout_alignRight="@+id/passwordRegisterTextView"
+                    android:layout_alignEnd="@+id/passwordRegisterTextView"
+                    android:textColor="#000000"/>
+
+                <EditText
+                    android:id="@+id/emailRegisterField"
+                    android:singleLine="true"
+                    android:text=""
+                    android:layout_width="250dip"
+                    android:gravity="left"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:layout_alignBaseline="@+id/emailRegisterTextView"
+                    android:layout_alignBottom="@+id/emailRegisterTextView"
+                    android:layout_toRightOf="@+id/emailRegisterTextView"
+                    android:layout_toEndOf="@+id/emailRegisterTextView"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:id="@+id/registerButton"
+                    android:layout_below="@+id/emailRegisterField"
+                    android:layout_alignLeft="@+id/loginButton"
+                    android:layout_alignStart="@+id/loginButton"
+                    android:layout_marginTop="25dp"
+                    android:onClick="registerButtonPressed"
+                />
+
+            -->
+
+
+        </RelativeLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

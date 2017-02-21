@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>WildFire</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXm-qy62AGUGI3kqwgyMdoXcHb7lTKyZk&libraries=visualization"></script>
+	<script src="bower_components/heatmap.js-amd/build/heatmap.js"></script>
+	<script src="bower_components/heatmap.js-amd/plugins/gmaps-heatmap.js"></script>
+	<script src="scripts/sensors.js"></script>
+	<script src="scripts/heatmap_interface.js"></script>
+	<script src="scripts/controls.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		html, body { height: 100%; margin: 0; padding: 0; }
+
+		#holder {position: relative;}
+		#map {height: 100%;}
+
+		#main_controls {
+			background: #000;
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			height: 100px;
+			top: 10px;
+			left: 10px;
+			opacity: 0.75;
+			position: absolute;
+			width: -moz-calc(100% - 20px);
+			width: -webkit-calc(100% - 20px);
+			width: -o-calc(100% - 20px);
+			width: calc(100% - 20px);
+			z-index: 99;
+
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border-radius: 10px; /* future proofing */
+			-khtml-border-radius: 10px; /* for old Konqueror browsers */
+		}
+
+		.btn:focus, .btn:active:focus, .btn.active:focus{
+			outline-color: transparent;
+			outline-style: none;
+		}
+		#currentTime {
+			padding-top: 0;
+			margin-top: 0;
+		}
+
+
+		.hidden {display: none;}
+		.overlay {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			opacity: 0.7;
+			z-index: 1;
+		}
+
+	</style>
+</head>
+
+<body>
+
+<!--<div class="overlay"><img alt="Loading" src="images/loading.gif" /></div>-->
+<div id="map"></div>
+
+<div id="main_controls">
+	<div class="container" style="margin: 0 10px 0 10px;">
+		<div class="row">
+			<div class="col-md-2">
+				<h2 style="margin-top:10px">Chicago</h2>
+				<h2 id="currentTime"></h2>
+			</div>
+			<div class="col-md-3" >
+				<div style="margin-top:13px">
+					<p>Enable/Disable gas visibility:</p>
+					<div class="btn-group">
+						<button id="co-toggle" type="button" class="btn btn-primary" onclick="toggleNode('co')">CO</button>
+						<button id="co2-toggle" type="button" class="btn btn-default" onclick="toggleNode('co2')">CO<sub>2</sub></button>
+						<button id="o3-toggle" type="button" class="btn btn-default" onclick="toggleNode('o3')">O<sub>3</sub></button>
+						<button id="no2-toggle" type="button" class="btn btn-default" onclick="toggleNode('no2')">NO<sub>2</sub></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+	window.nodes = {};
+
+	var visibleNode = 'co';
+
+	var toggleNode = function(nodeType) {
+		$('#' + visibleNode + '-toggle').toggleClass('btn-primary btn-default');
+		$('#' + nodeType + '-toggle').toggleClass('btn-primary btn-default');
+
+		visibleNode = nodeType;
+		requestNodes();
+	};
+
+	var requestNodes = function () {
+		var reqParams = {
+			attrib: 'heat',
+			gas: visibleNode
+		};
+
+		$.get('api/nodes', reqParams, function(nodes) {
+			heatmap.cfg.valueField = visibleNode + '_Lvl';
+			heatmap.setData(nodes);
+		});
+	};
+
+	var startTime = function() {
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var s = today.getSeconds();
+		m = checkTime(m);
+		s = checkTime(s);
+		$('#currentTime').html(h + ":" + m + ":" + s);
+		var t = setTimeout(startTime, 500);
+	};
+
+	var checkTime = function(i) {
+		if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		return i;
+	};
+
+	var mapOptions = {
+		center: {
+			lat: 41.878488,
+			lng: -87.625546
+		},
+		zoom: 16
+	};
+
+	$(document).ready(function() {
+		var selectedNodes = {}
+		startTime()
+		window.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+		window.heatmap = new HeatmapOverlay(map, {
+			radius: 0.0002,
+			minOpacity:.1,
+			scaleRadius: true,
+			useLocalExtrema: false,
+			latField: 'lat',
+			lngField: 'long',
+			valueField: visibleNode + '_Lvl'
+		});
+
+		// Start Pulling Sensor Data
+		setTimeout(function() {
+			requestNodes();
+		}, 200);
+
+	});
+</script>
+</body>
+</html>

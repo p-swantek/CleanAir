@@ -1,0 +1,70 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- A 'parent' preference, which enables/disables child preferences (below)
+         when checked/unchecked. -->
+    <!-- <SwitchPreference
+        android:defaultValue="true"
+        android:key="notifications_new_message"
+        android:title="@string/pref_title_new_message_notifications"/> -->
+
+    <!-- Allows the user to choose a ringtone in the 'notification' category. -->
+    <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
+    <!-- NOTE: RingtonePreference's summary should be set to its value by the activity code. -->
+    <!-- <RingtonePreference
+        android:defaultValue="content://settings/system/notification_sound"
+        android:dependency="notifications_new_message"
+        android:key="notifications_new_message_ringtone"
+        android:ringtoneType="notification"
+        android:title="@string/pref_title_ringtone"/> -->
+
+    <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
+    <!-- <SwitchPreference
+        android:defaultValue="true"
+        android:dependency="notifications_new_message"
+        android:key="notifications_new_message_vibrate"
+        android:title="@string/pref_title_vibrate"/> -->
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:id="@+id/notifCheckBox"
+        android:key="notifications"
+        android:title="Receive notifications"
+        android:summary="Check this box if you are a non-collector that wants background service notifications"></CheckBoxPreference>
+
+    <EditTextPreference
+        android:defaultValue="2500"
+        android:singleLine="true"
+        android:inputType="numberDecimal"
+        android:key="CO2ET"
+        android:title="CO2 value"
+        android:summary="CO2 ppm value that CleanAir will consider dangerous"
+        android:dialogTitle="Enter a CO2 ppm value" />
+
+    <EditTextPreference
+        android:defaultValue="100"
+        android:singleLine="true"
+        android:inputType="numberDecimal"
+        android:key="COET"
+        android:title="CO value"
+        android:summary="CO ppm value that CleanAir will consider dangerous"
+        android:dialogTitle="Enter a CO ppm value" />
+
+    <EditTextPreference
+        android:defaultValue="0.1"
+        android:singleLine="true"
+        android:inputType="numberDecimal"
+        android:key="O3ET"
+        android:title="O3 value"
+        android:summary="O3 ppm value that CleanAir will consider dangerous"
+        android:dialogTitle="Enter a O3 ppm value" />
+
+    <EditTextPreference
+        android:defaultValue="0.05"
+        android:singleLine="true"
+        android:inputType="numberDecimal"
+        android:key="NO2ET"
+        android:title="NO2 value"
+        android:summary="NO2 ppm value that CleanAir will consider dangerous"
+        android:dialogTitle="Enter a NO2 ppm value" />
+
+</PreferenceScreen>

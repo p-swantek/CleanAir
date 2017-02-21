@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>   
+<style>
+    html {
+         /*background: url("logoTrans.jpg") no-repeat center center fixed; */
+        background: #0066cc;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+    }
+    body {
+        /*background-color: #241313;*/
+        color: white;
+        font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+    }
+    
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+    
+    li {
+        display: inline;
+        list-style: none;
+        
+    }
+    
+    ul.navbar {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        border-style: outset;
+        border-radius: 15px;
+    }
+    
+    ul.hardware {
+    list-style-type: circle;
+}
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+        /*background-color: #3c1f1f;*/
+        -webkit-transform: scale(1.2);
+	   transform: scale(1/2);
+    }
+    
+    .active {
+    background-color: crimson;
+}
+    
+    #titleImg {
+        margin-top: 40px;
+        margin-left: 25%;
+        width: 15%;
+        z-index: 9999;
+        display: inline;
+    }
+    #title {
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 70px;
+        margin-top: -90px;
+        display: inline;
+    }
+        
+    #home {
+        height: auto;
+        border-style: outset;
+        border-radius: 15px;
+        font-size: 20px;
+    }
+    
+     #home p{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    #aboutimg{
+        margin-top:15px;
+        margin-bottom: 15px;
+    }
+    #heatMap {
+        height: 100%;    
+    }
+        
+    #markerMap {
+        height: 100%;
+    }
+    #mapDetails {
+        height: 150%;
+        border-style: outset;
+        border-radius: 15px;
+        text-align: left;
+    }   
+    #android {
+        height: 100%;  
+    }
+    #androidDetails {
+        font-size: 18px;
+    }
+
+    #fieldTest {
+        height: 100%;
+        border-style: outset;
+        border-radius: 15px;
+    }
+    #hardware {
+        height: auto;
+        border-style: outset;
+        border-radius: 15px;
+        text-align: left;
+    }
+    #hardimg{
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: 30%;
+        margin-top: 10px;
+    }
+    #saftey {
+        height: 100%;
+        border-style: outset;
+        border-radius: 15px;
+    }
+    #future {
+        height: 100%;
+        border-style: outset;
+        border-radius: 15px;
+    }
+    #jira {
+        height: 100%;
+    }
+    #goals {
+        height: 50%;
+        border-style: outset;
+        border-radius: 15px;
+    }
+    #useCases {
+        height: auto;
+        border-style: outset;
+        border-radius: 15px;
+        text-align: left;
+    }
+    #userManual {
+        height: 100%;
+        border-style: outset;
+        border-radius: 15px;
+    }
+    #glossary {
+        height: 50%;
+        border-style: outset;
+        border-radius: 15px;
+    }
+    #simple {
+        height: 100%;
+    }
+    .content {
+        position: absolute;
+        margin-top: 10px;
+        text-align: center;
+        width: 88% !important;
+        opacity: 0;
+        -webkit-transition: all .5s linear;
+        -ms-transition: all .5s linear;
+        -moz-transition: all .5s linear;
+        -0-transition: all .5s linear;
+        transition: all .5s linear;
+    }
+        
+    .content:target {
+        opacity: 1;
+        -webkit-transition: all .5s linear;
+        -ms-transition: all .5s linear;
+        -moz-transition: all .5s linear;
+        -0-transition: all .5s linear;
+        transition: all .5s linear;
+    }
+    #glossaryTable {
+        text-align: left;
+    }
+    
+    table{
+        border: 4px solid #66b2ff;
+        width: 90%;
+        border-collapse: collapse;
+        margin-left: 5%;
+        margin-right: 10%;
+    }
+    
+    th {
+        border: 3px solid #66b2ff;
+        text-align: center;
+    }
+    
+    td {
+        border: 1px solid #66b2ff;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    
+    #imgApp {
+        margin: 0 10px 20px 10px;
+    }
+    .gridContainer {
+        width: 91.45%;
+        padding-left: 0.775%;
+        padding-right: 0.775%;
+        clear: none;
+        float: none;
+        margin: 8px auto 0 auto;
+        height: auto;
+    }
+    
+    footer {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 12px;
+        
+    }
+        
+    
+</style>
+    
+    <meta charset="utf-8" />
+    <title>CleanAir</title>
+    <link rel="icon" type="image/x-icon" href="Images/logoTrans.ico">
+    
+    </head>
+    
+<body>
+    <div class="gridContainer">
+        <header>
+            <img id="titleImg" src="Images/logoTrans.png">
+            <div id="title">CleanAir</div>
+        </header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#home">ABOUT</a></li>
+                <li><a href="#heatMap">HEAT MAP</a></li>
+                <li><a href="#markerMap">MARKER MAP</a></li>
+                <li><a href="#mapDetails">MAP DETAILS</a></li>
+                <li><a href="#android">ANDROID</a></li>
+               <!-- <li><a href="#fieldTest">FIELD TEST</a></li> -->
+                <li><a href="#hardware">HARDWARE</a></li>
+                <li><a href="#saftey">SAFETY CASES</a></li>
+                <li><a href="#future">FUTURE WORK</a></li>
+                <li><a href="#jira">JIRA</a></li>
+                <li><a href="#goals">GOALS</a></li>
+                <li><a href="#useCases">USE CASES</a></li>
+                <li><a href="#userManual">USER MANUAL</a></li>
+                <li><a href="#glossary">GLOSSARY</a></li>
+                <li><a href="#simple">SimpleFMECA</a></li>
+            </ul>
+        </nav>
+        <div id ="home" class="gridContainer content">
+            <h1>About</h1>
+            <br><p>“Ozone, when it occurs at ground level, presents a serious air quality problem in many parts of the United States. When inhaled— even at very low levels— ozone can cause a number of respiratory health effects” - US EPA</p><br><br>
+            <p>The problem of air pollution is becoming more and more problematic as the world becomes more industrialized.</p><br><br>
+            <p>CleanAir helps users monitor pollutant levels around the world. Alerting users when appropriate.</p><br><br>
+            <p>CleanAir has an App that uses sensors to monitor the air quality around you.</p><br><br>
+            <p>By testing for different chemicals in the air we breathe we can detect if the levels of these chemicals are harmful to breathe.</p><br><br>  
+            <p>Currently CleanAir can test for CO, CO<sub>2</sub>, O<sub>3</sub>, and NO<sub>2</sub></p>
+            <img id="aboutimg" src="Images/Workflow.png">
+        </div>
+        <div id ="heatMap" class="gridContainer content">
+            <h1>Heat Map</h1>
+            <p>Displays based on readings at given locations and gives a general sense of what data is being passed.</p>
+            <iframe id="map" src="http://168.62.234.19/heatmap.html"></iframe>
+        </div>
+        
+        <div id ="markerMap" class="gridContainer content">
+            <h1>Marker Map</h1>
+            <p>Gives exact readings at given locations. Better for seeing more specific readings.</p>
+            <iframe id="map2" src="http://168.62.234.19/map.html"></iframe>
+            <h2>Basic Design</h2>
+            <img src="Images/markerMapUML.png">
+            <h3>Sensor Map</h3>
+            <p>At the core of the marker map, is the sensorMap class, which contains methods for plotting the markers. It contains a field, which is a single instance of the nodeCache class. The nodeCache is responsible for requesting data from the server, and caching that data. When the map re-draws, sensorMap calls the cache, to return an array of nodes, which the sensor map class evaluates and plots. Before drawing new nodes, the sensor map calls a cleanUp method to ensure that any nodes which are no longer in lat/long bounds, time bounds, or may colide with another node are removed.</p>
+            <h3>Node Cache</h3>
+            <p>The cache has some rutines to track which nodes are within the bounds of the screen, as well as the bounds of time. As such, when the sensorMap calls on it, it only returns nodes which are eligible to be plotted. The cache refreshes server data on a timer, and only pushes a map redraw when the cache contents have changed.</p>
+            <h3>Sensor Types</h3>
+            <p>You will find that web/scripts/sensors.js is a very simply file, with a class declaration and an array that defines the sensors that the map knows of. Here you can tweak the warning / critical values of the gases</p>
+            <h3>Control Manager</h3>
+            <p>window.CM is an instance of the controlMgr class, which draws the UI on top of the map, and allows users to select between the various gas types. When the control manager initalizes, it loads the values from the sensors.js. It also includes the time display, and time span drop down.</p>
+            <h3>Sensor Nodes</h3>
+            <p>The sensorNode class is like a wraper that extends the functionality of the Marker With Label class. For full disclosure; Marker With Label is a class written by Gary Little of luxcentral.com, and is Licensed under the Apache License, Version 2.0. This class was used to extend the function of the Google marker class, which can only display a single charicter. Maker With Label allows for many charicters. The sensorNode class adds a timestamp field, and methods for the sensorMap class to interact with.</p>
+          
+        </div>
+        
+        <div id ="mapDetails" class="gridContainer content">
+            <h1 style="text-align:center;">Map Details</h1>
+            <p>Note : heatmap may only partly function right. Most development effort, and items described apply towards the marker map. Heatmap is to be considered experimental.</p><br>
+            <p style="text-align: left; margin-left: 5%;">Safety Critical Features</p>
+            <ul class="mapDetails">
+                <li style="margin-left:5em">- Markers show readings from various sensors as raw number</li><br>
+                <li style="margin-left:5em">- User can select between various gas types </li><br>
+                <li style="margin-left:5em">- Markers change color to indicate danger levels based on researched safe levels </li><br>
+                <li style="margin-left:5em">- Markers should not overlap, as they become unreadable and degrade performance </li><br>
+                <li style="margin-left:5em">- When Markers overlap, precedence is given to the newest reading </li><br>
+                <li style="margin-left:5em">- The time span from the oldest to the newest marker is displayed</li><br>
+                <li style="margin-left:10em">+ Users can make informed decisions as to whether the data is current/trustworthy</li><br>
+                <li style="margin-left:5em">- By default, only makers are displayed which are within 2 hours of the newest marker</li><br><br><br>
+                
+            </ul>
+            <p style="text-align: left; margin-left: 5%;">Optimizations</p>
+            <ul class="mapDetails">
+                <li style="margin-left:5em">- Class based, object oriented design</li><br>
+                <li style="margin-left:5em">- Do not spend resources packing data points to be drawn if they</li><br>
+                <li style="margin-left:10em">+ Overlap</li><br>
+                <li style="margin-left:10em">+ Are too old</li><br>
+                <li style="margin-left:10em">+ Are out of bounds</li><br>
+                <li style="margin-left:5em">- Re-draws are event driven, rather than continuous or timer based. Triggers :</li><br>
+                <li style="margin-left:10em">+ The screen is repositioned</li><br>
+                <li style="margin-left:10em">+ The screen is zoomed</li><br>
+                <li style="margin-left:10em">+ Data pulled from the server has changed</li><br>
+                <li style="margin-left:5em">- Server data is cached, and passed to the evaluating / drawing routines when parameters change</li><br>
+                <li style="margin-left:10em">+ To not wait on a re-pull</li><br>
+                <li style="margin-left:10em">+ Particularly useful when rapidly dragging around</li><br>
+            </ul>
+            
+        </div>
+        
+        <div id ="android" class="gridContainer content">
+            <h1>Android App</h1>
+            <div id="androidDetails">
+                <p>- Users can log in, have an associated user ID</p>
+                <p>- User can opt to enable data collection/uploading</p>
+                <p>- Choosing to collect data starts bluetooth connection to hardware</p>
+                <p>- Data periodically pushed to server, can view data on map via mobile</p>
+            </div>
+            <img id="imgApp" src="Images/Img1.png">
+            <img id="imgApp" src="Images/Img2.png">
+            <img id="imgApp" src="Images/Img3.png">
+            <img id="imgApp" src="Images/Img9.png">
+            <img id="imgApp" src="Images/Img12.png">
+            <img id="imgApp" src="Images/Img10.png">
+            <img id="imgApp" src="Images/Img4.png">
+            <img id="imgApp" src="Images/Img11.png">
+            <img id="imgApp" src="Images/Img5.png">
+            <img id="imgApp" src="Images/Img6.png">
+            <img id="imgApp" src="Images/Img7.png">
+            <img id="imgApp" src="Images/Img8.png">
+        </div>
+        
+        <div id ="fieldTest" class="gridContainer content">
+            <h1>Field Test</h1>
+            <p>- Taking the WASPMOTE out for real world data</p><br>
+            <p>- Collection from various areas around Chicagoland</p><br>
+            <p>- Simulate a more extreme situation with burning paper and cigarettes</p>
+            
+        </div>
+        
+        <div id ="hardware" class="gridContainer content">
+            <h1 style="text-align:center;">Hardware</h1>
+            <p style="text-align: left; margin-left: 5%;">Waspmote</p>
+            <ul class="hardware">
+                <li style="margin-left:5em">- Open source sensor platform</li><br>
+                <li style="margin-left:5em">- Modular architecture: Allows for using only desired modules or sensors </li><br>
+				<li style="margin-left:5em">- Bluetooth low energy (BLE) chip is used on the Waspmote to transmit data from the gas sensor board wirelessly to mobile devices</li>
+            </ul>
+            <p style="text-align: left; margin-left: 5%;">Gas Sensor Board</p>
+            <ul class="hardware">
+                <li style="margin-left:5em">- Integrates into the Waspmote, designed to monitor environmental parameters</li><br>
+                <li style="margin-left:5em">- Allows inclusion of sensors (up to 6) that will measure different gases to allow for quantification of an area's air quality</li><br>
+				<li style="margin-left:5em">- Sensors to detect carbon dioxide, carbon monoxide, ozone, and nitrogen dioxide are being used by CleanAir to monitor the environment</li>
+            </ul>
+            <img id="hardimg" src="Images/Hardware.png">
+        </div>
+        
+        <div id ="saftey" class="gridContainer content">
+            <h1>Safety</h1>
+            <p>Our biggest concern is that our application misreads/misinterprets data being sent. Depending on how reliable the application and interface is, users may become exposed to a harmful environment. Because of the nature of what we are measuring (long term consequences over immediate displays of symptoms). It is somewhat difficult to truly measure the consequences of our application misreading data. We also have no subject matter expert for our material. We are, however, taking data verification and database maintenance into account. Also, with the addition of more and more readings it would be possible to differentiate outliers.</p>
+            
+        </div>
+        
+        <div id ="future" class="gridContainer content">
+            <h1>Future Work</h1><br>
+            <p>User Sign-in</p><br>
+            <p>Validating data system</p><br>
+            <p>An algorithm which looks for unrealistic deviations in data, and throws out what it considers to be outliers. AKA, if 5 people within 10 feet of each other are all returning data between 1 and 2, but a 6th person returns a reading of 5 at the same point in time, we would consider that bad.</p><br>
+            <p>Refactor the way we implemented permissions code to the way android shifted to recently in Marshmallow.</p>  
+        </div>
+        
+        <div id ="jira" class="gridContainer content">
+            <h1>JIRA</h1>
+            <embed src="JIRA.pdf" width="800px" height="2125px">
+        </div>
+        
+        <div id ="goals" class="gridContainer content">
+            <h1 style="text-align: center; margin-bottom: 35px;">Goals</h1>
+            <p>GOAL 1: Users should be able to utilize the sensor and collect and upload readings of hazardous particulates</p><br>
+            <p>GOAL 2: Consumers should be able to receive data and warnings from the collected readings</p>
+            
+        </div>
+        
+        <div id ="useCases" class="gridContainer content">
+            <h1 style="text-align:center;">Use Cases</h1>
+            <p style="margin-left:5em">Title: UC1</p>
+            <ul class="useCases">
+                <li style="margin-left:5em">Operation in hazardous conditions</li><br>
+                <li style="margin-left:5em">Related Goals:</li><br>
+                    <li style="margin-left:10em">- G1, G2</li><br>
+                <li style="margin-left:5em">Description:</li><br>
+            <li style="margin-left:10em">- This use case describes how the app and sensors will be used by emergency crews who,</li><br>
+                <li style="margin-left:10em">   are entering a potentially environmentally hazardous situation</li><br>
+                <li style="margin-left:5em">Primary Actors</li><br>
+            <li style="margin-left:10em">- Rescue workers (or other persons) who are regularly exposed to potentially hazardous particulates.</li><br>
+            <li style="margin-left:5em">Precondition:</li><br>
+                <li style="margin-left:10em">1. Rescue worker has sensors connected to app </li><br>
+                <li style="margin-left:10em">2. Rescue worker has the app installed on their personal device</li><br>
+                <li style="margin-left:10em">3. Sensors are actively reading data</li><br>
+            <li style="margin-left:5em">PostCondition:</li><br>
+                <li style="margin-left:10em">1. Sensors are off</li><br>
+                <li style="margin-left:10em">2. User has received the relevant warnings if applicable</li><br>
+                <li style="margin-left:5em">Main Success Scenario:</li><br>
+                    <li style="margin-left:10em">1. Sensors relay correct information to database</li><br>
+                    <li style="margin-left:10em">2. Worker is notified of hazardous conditions</li><br>
+            </ul>
+            
+            <p style="margin-left:5em">Title: UC2</p>
+            <ul class="useCases">
+                <li style="margin-left:5em">Normal Operation by pedestrians and/or citizens</li><br>
+                <li style="margin-left:5em">Related Goals</li><br>
+                    <li style="margin-left:10em">- G2</li><br>
+                <li style="margin-left:5em">Description</li><br>
+                    <li style="margin-left:10em">- This use case describes how the app will be used by users who are actively recording data</li><br><li style="margin-left:10em"> and pushing to a database.</li><br>
+                    <li style="margin-left:10em">- This use case also describes how a user with the app (but no sensors) may utilize the data</li><br><li style="margin-left:10em"> that is being uploaded by others.</li><br>
+                <li style="margin-left:5em">Primary Actors</li><br>
+                    <li style="margin-left:10em">- Users with the app and the sensors that are continuously reading data.</li><br>
+                    <li style="margin-left:10em">- Users who utilize the app to gain environmental quality data in order to make potential lifestyle adjustments</li><br>
+                <li style="margin-left:5em">Precondition:</li><br>
+                    <li style="margin-left:10em">1. User may have sensors connected to app (if user is acting as a data gatherer)</li><br>
+                    <li style="margin-left:10em">2. User has application installed on their personal device</li><br>
+                    <li style="margin-left:10em">3. Sensors are reading data (if user is acting as a data gatherer)</li><br>
+                <li style="margin-left:5em">PostCondition:</li><br>
+                    <li style="margin-left:10em">1. User gets a measurement on the local air quality</li><br>
+                    <li style="margin-left:10em">2. Sensors are turned off</li><br>
+                    <li style="margin-left:10em">3. Data output from sensors was successfully recorded, pushed to database</li><br>
+                <li style="margin-left:5em">Main Success Scenario</li><br>
+                    <li style="margin-left:10em">1. Sensors are able to generate accurate readings</li><br>
+                    <li style="margin-left:10em">2. App records correct information, successfully sends to the database</li><br>
+                    <li style="margin-left:10em">3. User is notified of potential hazardous conditions and general environmental quality</li><br>
+            </ul>
+            
+            <p style="margin-left:5em">Title: UC3</p>
+            <ul class="useCases">
+            <li style="margin-left:5em">Data collection for environmental research</li><br>
+                <li style="margin-left:5em">Related Goals</li><br>
+                    <li style="margin-left:10em">- G2</li><br>
+                <li style="margin-left:5em">Description</li><br>
+                    <li style="margin-left:10em">- This use case describes how an independent researcher can utilize the crowd sourced environmental data</li><br><li style="margin-left:10em"> for research purposes</li><br>
+                <li style="margin-left:5em">Primary Actor</li><br>
+                    <li style="margin-left:10em">- Researchers monitoring certain environmental conditions over time</li><br>
+                <li style="margin-left:5em">Precondition:</li><br>
+                    <li style="margin-left:10em">1. Researcher is able to connect to the database</li><br>
+                    <li style="margin-left:10em">2. Database contains accurate environmental data that was gathered from sensor network</li><br>
+                <li style="margin-left:5em">PostCondition:</li><br>
+                    <li style="margin-left:10em">1. Database connection terminated</li><br>
+                    <li style="margin-left:10em">2. Database integrity remains intact</li><br>
+                <li style="margin-left:5em">Main Success Scenario</li><br>
+                    <li style="margin-left:10em">- Researcher/User able to successfully extract required information from database</li><br>
+            </ul>
+        </div>
+        
+        <div id ="userManual" class="gridContainer content">
+            <h1 >User Manual</h1>
+			<h2 style="text-align: left; margin-left: 5%;">Hardware Setup</h2>
+			<p style="text-align: left; margin-left: 5%;">1. Attach each of the 4 sensors to the gas board.</p>
+			<p style="text-align: left; margin-left: 5%;">2. Insert bluetooth chip onto the Waspmote, then insert the gasboard with attached sensors.  Plug the battery into the Waspmote.</p>
+			<p style="text-align: left; margin-left: 5%;">3. By using the associated Waspmote IDE, upload the program fast_main_measurement.pde to the board (this will get sensor readings every 15 seconds).</p>
+			<p style="text-align: left; margin-left: 5%;">4. If program uploads succesfully, the Wasmpote will now run the measurement program whenever it is powered on.  The Waspmote is now ready for use with the mobile app.</p>
+			<h2 style="text-align: left; margin-left: 5%;">Linking Waspmote to Mobile App to Collect Data</h2>
+			<p style="text-align: left; margin-left: 5%;">1. Turn on the waspmote to start the measurement program.  The Waspmote will now wait for 2 minutes for the mobile app to establish an initial connection via bluetooth as well as heat up the gas sensors that need heating.</p>
+			<p style="text-align: left; margin-left: 5%;">2. Open the mobile app. From the main screen, open the menu and click the settings option.  Under general, check the box to indicate that you want to collect gas readings.  Navigate back to main screen.  If bluetooth is not enabled, a prompt to enable it will display.</p>
+			<p style="text-align: left; margin-left: 5%;">3. A message will display when the mobile app establishes the initial bluetooth link to the Waspmote.</p>
+			<p style="text-align: left; margin-left: 5%;">4. The Waspmote will continue performing its measurement cycle in the background. Any time sensor data is gathered, it will be sent to the mobile app which will then post that data to the web server.</p>
+			<h2 style="text-align: left; margin-left: 5%;">Viewing Maps</h2>
+			<p style="text-align: left; margin-left: 5%;">1. From the main screen, open the menu and select which map you would like to view (heatmap or marker map).</p>
+			<p style="text-align: left; margin-left: 5%;">2. For each map, the user can select which specific gas he or she would like to monitor using the associated check boxes.  The user can also use the drop down to select a time span.</p>
+			<h2 style="text-align: left; margin-left: 5%;">Configuring Notifications</h2>
+			<p style="text-align: left; margin-left: 5%;">1. From the main screen, open the menu and select settings. From the settings menu, select the notifications.</p>
+			<p style="text-align: left; margin-left: 5%;">2. The user can use the checkbox to indicate if he or she would like to receive notifications from the app. If selected, the app will monitor the data from the Waspmote in addition to the surrounding area and send push notifications if any gas reaches a dangerous level.</p>
+			<p style="text-align: left; margin-left: 5%;">3. The user can also select one or more gas values and manually enter in a gas level that should be considered by the app to be dangerous.  Notifications sent will be with respect to this newly indicated gas level.</p>
+		
+        </div>
+        
+        <div id ="glossary" class="gridContainer content">
+            <h1 style="text-align: center; margin-bottom: 35px;">Glossary</h1>
+            <table id="glossaryTable">
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                </tr>
+                <tr>
+                    <td>Hazardous Particulates</td>
+                    <td>Particulates sensed by the application that are potentially hazardous to the user's health</td>
+                </tr>
+                <tr>
+                    <td>Sensor</td>
+                    <td>The Sensor</td>
+                </tr>
+                <tr>
+                    <td>The App</td>
+                    <td>May refer to web or mobile user facing app</td>
+                </tr>
+                <tr>
+                    <td>Personal device</td>
+                    <td>Smart phone or tablet</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div id ="simple" class="gridContainer content">
+            <h1>Simple FMECA</h1>
+            <embed src="SimpleFMECA.pdf" width="800px" height="2125px">
+            
+        </div>
+		
+	
+        <footer>
+            
+        </footer>
+    </div>
+        <script type="text/javascript">    
+            
+        
+        
+            
+		
+	</script>
+		
+</body>
+</html>

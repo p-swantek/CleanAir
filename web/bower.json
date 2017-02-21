@@ -1,0 +1,22 @@
+{
+  "name": "web",
+  "homepage": "https://github.com/SAREC-Lab/SEStudio-Environment",
+  "authors": [
+    "SE491 Environmental Team"
+  ],
+  "description": "Web component of the SE491 2015-16 environmental tracker app",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "heatmap.js-amd": "heatmap.js.bower#*"
+  }
+}

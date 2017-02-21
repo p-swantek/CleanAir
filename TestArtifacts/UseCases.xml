@@ -1,0 +1,552 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:c="urn:schemas-microsoft-com:office:component:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40"
+ xmlns:x2="http://schemas.microsoft.com/office/excel/2003/xml"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Qu, Xin</LastAuthor>
+  <LastSaved>2016-04-25T19:03:31Z</LastSaved>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <WorkbookGuid dt:dt="string">ca171621-6560-45be-8b7e-6442264a0fe1</WorkbookGuid>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <Colors>
+   <Color>
+    <Index>3</Index>
+    <RGB>#000000</RGB>
+   </Color>
+   <Color>
+    <Index>4</Index>
+    <RGB>#C0C0C0</RGB>
+   </Color>
+   <Color>
+    <Index>5</Index>
+    <RGB>#C5D9F1</RGB>
+   </Color>
+   <Color>
+    <Index>6</Index>
+    <RGB>#FF0000</RGB>
+   </Color>
+  </Colors>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8160</WindowHeight>
+  <WindowWidth>21570</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62" ss:Name="Default">
+  </Style>
+  <Style ss:ID="s67" ss:Name="Normal_">
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s70" ss:Parent="s67">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Liberation Sans1" ss:Size="12" ss:Color="#000000"/>
+   <Interior ss:Color="#C5D9F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s71" ss:Parent="s67">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Liberation Sans1" ss:Size="12" ss:Color="#000000"/>
+   <Interior ss:Color="#C5D9F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s72" ss:Parent="s67">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Liberation Sans1" ss:Size="12" ss:Color="#000000"/>
+   <Interior ss:Color="#C5D9F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s73" ss:Parent="s67">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Liberation Sans1" ss:Size="12" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s74" ss:Parent="s67">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Liberation Sans1" ss:Size="12" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s75" ss:Parent="s67">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Liberation Sans1" ss:Size="12"/>
+  </Style>
+  <Style ss:ID="s76" ss:Parent="s62">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Liberation Sans1" ss:Size="12"/>
+  </Style>
+  <Style ss:ID="s77" ss:Parent="s67">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Liberation Sans1" ss:Size="12"/>
+  </Style>
+  <Style ss:ID="s78" ss:Parent="s62">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Liberation Sans1" ss:Size="12"/>
+  </Style>
+  <Style ss:ID="s79" ss:Parent="s62">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Liberation Sans1" ss:Size="12" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s80" ss:Parent="s67">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Liberation Sans1" ss:Size="12"/>
+  </Style>
+  <Style ss:ID="s81" ss:Parent="s67">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Liberation Sans1" ss:Size="12"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="UC1">
+  <Table ss:ExpandedColumnCount="1024" ss:ExpandedRowCount="4096"
+   x:FullColumns="1" x:FullRows="1" ss:StyleID="s62" ss:DefaultRowHeight="15">
+   <Column ss:StyleID="s62" ss:Width="142.5"/>
+   <Column ss:StyleID="s62" ss:Width="49.5"/>
+   <Column ss:StyleID="s62" ss:Width="424.5"/>
+   <Column ss:StyleID="s62" ss:Width="63.75" ss:Span="1019"/>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Title:</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">UC1</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">Operation in hazardous conditions</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Related Goals</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">G1, G2</Data></Cell>
+    <Cell ss:StyleID="s73"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Description</Data></Cell>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">This use case describes how the app and sensors will be used by emergency crews who are entering a potentially environmentally hazardous situation</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Primary Actors</Data></Cell>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"><Data ss:Type="String"> Rescue workers (or other persons) who are regularly exposed to potentially hazardous particulates.</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Precondition:</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Rescue worker has sensors connected to app </Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Rescue worker has the app installed on their personal device</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Sensors are actively reading data </Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s77"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">PostCondition</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Sensors are off</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">User has received the relevant warnings if applicable</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s77"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Main Success Scenario</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Sensors relay correct information to database</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s78"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="String">Worker is notified of hazardous conditions</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:Index="4096" ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <x:WorksheetOptions/>
+ </Worksheet>
+ <Worksheet ss:Name="UC2">
+  <Table ss:ExpandedColumnCount="1024" ss:ExpandedRowCount="4096"
+   x:FullColumns="1" x:FullRows="1" ss:StyleID="s62" ss:DefaultRowHeight="15">
+   <Column ss:StyleID="s62" ss:Width="141.75"/>
+   <Column ss:Index="3" ss:StyleID="s62" ss:Width="439.5"/>
+   <Column ss:StyleID="s62" ss:Width="63.75" ss:Span="1019"/>
+   <Row ss:AutoFitHeight="0" ss:Height="19.5">
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Title:</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">UC2</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">Normal Operation by pedestrians and/or citizens</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="31.3125">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Related Goals</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">G2</Data></Cell>
+    <Cell ss:StyleID="s73"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Description</Data></Cell>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">This use case describes how the app will be used by users who are actively recording data and pushing to a database.</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">This use case also describes how a user with the app (but no sensors) may utilize the data that is being uploaded by others.</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Primary Actors</Data></Cell>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Users with the app and the sensors that are continuously reading data.</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Users who utilize the app to gain environmental quality data in order to make potential lifestyle adjustments</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Precondition:</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">User may have sensors connected to app (if user is acting as a data gatherer)</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s80"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">User has application installed on their personal device</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s80"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Sensors are reading data (if user is acting as a data gatherer)</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s80"/>
+    <Cell ss:StyleID="s77"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">PostCondition</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">User gets a measurement on the local air quality</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:Index="2" ss:StyleID="s74"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Sensors are turned off</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s80"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Data output from sensors was successfully recorded, pushed to database</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s80"/>
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Main Success Scenario</Data></Cell>
+    <Cell ss:StyleID="s80"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Sensors are able to generate accurate readings</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s80"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">App records correct information, successfully sends to the database</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="26.8125">
+    <Cell ss:Index="2" ss:StyleID="s78"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="String">User is notified of potential hazardous conditions and general environmental quality</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:Index="4096" ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <x:WorksheetOptions/>
+ </Worksheet>
+ <Worksheet ss:Name="UC3">
+  <Table ss:ExpandedColumnCount="1024" ss:ExpandedRowCount="4096"
+   x:FullColumns="1" x:FullRows="1" ss:StyleID="s62" ss:DefaultRowHeight="15">
+   <Column ss:StyleID="s62" ss:Width="141.75"/>
+   <Column ss:StyleID="s62" ss:Width="34.5"/>
+   <Column ss:StyleID="s62" ss:Width="481.5"/>
+   <Column ss:StyleID="s62" ss:Width="63.75" ss:Span="1019"/>
+   <Row ss:AutoFitHeight="0" ss:Height="20.8125">
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Title:</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">UC3</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">Data collection for environmental research</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="19.5">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Related Goals</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">G2</Data></Cell>
+    <Cell ss:StyleID="s73"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Description</Data></Cell>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">This use case describes how an independent researcher can utilize the crowd sourced environmental data for research purposes</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Primary Actor</Data></Cell>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Researchers monitoring certain environmental conditions over time</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Precondition:</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Researcher is able to connect to the database</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="17.25">
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s80"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Database contains accurate environmental data that was gathered from sensor network</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="15.75">
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s80"/>
+    <Cell ss:StyleID="s77"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">PostCondition</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Database connection terminated </Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:Index="2" ss:StyleID="s74"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Database integrity remains intact</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s80"/>
+    <Cell ss:StyleID="s77"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s73"><Data ss:Type="String">Main Success Scenario</Data></Cell>
+    <Cell ss:StyleID="s80"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Researcher/User able to successfully extract required information from database</Data></Cell>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+    <Cell ss:StyleID="s75"/>
+    <Cell ss:StyleID="s80"/>
+    <Cell ss:StyleID="s77"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s79"/>
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+   <Row ss:Index="4096" ss:AutoFitHeight="0">
+    <Cell ss:Index="1024" ss:StyleID="s76"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <x:WorksheetOptions/>
+ </Worksheet>
+</Workbook>

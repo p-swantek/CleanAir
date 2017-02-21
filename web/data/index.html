@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CleanAir API Import/Test Script</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <script src="lib/jquery.js"></script>
+    <script>
+
+      $(document).ready(function () {
+	  $("#createUserBtn").click(function() {
+		var user = {
+			'fullname': 'Paul Test',
+			'username': 'ptestt1',
+			'email': 'ptest@gmail.com',
+			'password': 'test1234'
+		};
+		
+		$.ajax({
+			url: '/api/register',
+			dataType: 'json',
+			type: 'post',
+			contentType: 'application/x-www-form-urlencoded',
+			data: user,
+			success: function( data, textStatus, jQxhr ){
+				alert("User created.");
+			},
+			error: function( jqXhr, textStatus, errorThrown ){
+				alert( errorThrown + ' - User exists');
+			}
+		});
+					
+		});
+		$("#dataImportBtn").click(function() {
+			$.getJSON( "./import.json", function( data ) {
+				$.each(data, function(i, item) {
+					$('#importLog').append("Posting point #" + i + " at " + data[i].lat + " lat " + data[i].long + ' long&#13;&#10;'); 
+			
+					$.ajax({
+						url: '/api/nodes',
+						dataType: 'text',
+						type: 'post',
+						contentType: 'application/x-www-form-urlencoded',
+						data: data[i],
+						success: function( data, textStatus, jQxhr ){
+						},
+						error: function( jqXhr, textStatus, errorThrown ){
+							console.log( textStatus );
+						}
+					});
+					
+				});
+				//
+			});
+		});
+      });
+    </script>
+</head>
+<body>
+	<h2>1. User creation test</h2>
+	<p>This tool will create a user which can be verified in the database.</p>
+	
+	<button type="button" id="createUserBtn">Create a user</button><br/><br/>
+	
+	<hr/>
+	
+	<h2>2. Data import tool</h2>
+	<p>This tool will add all contents of import.json to the CleanAir database by making an API call for each JSON object in import.json.</p>
+	<p>Press "Begin Data Import" to begin sending data.</p>
+	<button type="button" id="dataImportBtn">Begin Data Import</button><br/><br/>
+	
+	Import log:<br/>
+	<textarea id="importLog" rows="15" cols="125"></textarea><br/><br/>
+	
+	<h2>3. Data import check</h2>
+	<p>Imported data should now be available at <a href="http://localhost:5000/api/nodes">http://localhost:5000/api/nodes</a></p>
+
+</body>
+</html>

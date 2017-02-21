@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>WildFire</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXm-qy62AGUGI3kqwgyMdoXcHb7lTKyZk&libraries=visualization"></script>
+		<script src="bower_components/heatmap.js-amd/build/heatmap.min.js"></script>
+		<script src="bower_components/heatmap.js-amd/plugins/gmaps-heatmap.js"></script>
+		<script async defer src="scripts/sensors.js"></script>
+		<script async defer src="scripts/heatmap_interface.js"></script>
+		<script async defer src="scripts/controls.js"></script>
+		
+ 		<style type="text/css">
+			html, body { height: 100%; margin: 0; padding: 0; }
+
+			#holder {position: relative;}
+			#map {height: 100%;}
+
+			.hidden {display: none;}
+			.overlay {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				opacity: 0.7;
+				z-index: 1;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<!--<div class="overlay"><img alt="Loading" src="images/loading.gif" /></div>-->
+		<div id="map"></div>
+
+
+		<script type="text/javascript">
+
+			var mapOptions = {
+				center: {
+					lat: 41.878488,
+					lng: -87.625546
+				},
+				zoom: 16
+			};
+			
+			$(document).ready(function() {
+
+				window.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+				window.heatmap = new HeatmapOverlay(map, {
+					radius: .0007,
+					maxOpacity: .6,
+					scaleRadius: true,
+					useLocalExtrema: true,
+					latField: 'lat',
+					lngField: 'long',
+					valueField: 'co_Lvl'
+				});
+
+				// Start Pulling Sensor Data
+				setTimeout(function() {
+					window.CM = new controlMgr();
+					getNodes(heatmap);
+				}, 200);
+
+			});
+		</script>
+	</body>
+</html>
