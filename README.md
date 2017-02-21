@@ -1,3 +1,10 @@
+### Group Credits:
++ Paul Duszak
++ Xin Qu
++ Terry Schmidt
++ Jessica Oberg
++ Tony Sarles
+
 # Deploying the server locally
 CleanAir infrastructure consists of a Node.js web server and MySQL database. In order to deploy  the website and API, you will need to install both Node.js and MySQL.
 
