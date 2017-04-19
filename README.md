@@ -111,9 +111,9 @@ Additional fields can be requested by passing the ***attrib*** parameter. ID, LA
         + SequelizeUniqueConstraintError - An already used email or username has been specified
 		
 		
-#User Manual
+# User Manual
 
-###Hardware Setup
+### Hardware Setup
 1. Attach each of the 4 sensors to the gas board.
 2. Insert bluetooth chip onto the Waspmote, then insert the gasboard with attached sensors.  Plug the battery into the Waspmote.
 3. By using the associated Waspmote IDE, upload the program fast_main_measurement.pde to the board (this will get sensor readings every 15 seconds).
@@ -127,13 +127,13 @@ Additional fields can be requested by passing the ***attrib*** parameter. ID, LA
 	- [Using Bluetooth low energy on Waspmote](http://www.libelium.com/development/waspmote/documentation/bluetooth-low-energy-networking-guide/)
 	
 
-###Linking Waspmote to Mobile App to Collect Data
+### Linking Waspmote to Mobile App to Collect Data
 1. Turn on the Waspmote to start the measurement program.  The Waspmote will now wait for 2 minutes for the mobile app to establish an initial connection via bluetooth as well as heat up the gas sensors that need heating.
 2. Open the mobile app. From the main screen, open the menu and click the settings option.  Under general, check the box to indicate that you want to collect gas readings.  Navigate back to main screen.  If bluetooth is not enabled, a prompt to enable it will display.
 3. A message will display when the mobile app establishes the initial bluetooth link to the Waspmote.
 4. The Waspmote will continue performing its measurement cycle in the background. Any time sensor data is gathered, it will be sent to the mobile app which will then post that data to the web server.
 
-###Viewing Maps
+### Viewing Maps
 1. From the main screen, open the menu and select which map you would like to view (heatmap or marker map).
 2. For each map, the user can select which specific gas he or she would like to monitor using the associated check boxes.  The user can also use the drop down to select a time span.
 
